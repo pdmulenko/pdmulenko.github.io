@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="controls">
+                <button id="theme-toggle">🌞 / 🌙</button>
+                <button id="lang-toggle">RU / EN</button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Добро пожаловать!</h1>
+        <p>Это пример статического сайта.</p>
+    </main>
+
+    <script>
+        // Переключение темы
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+        
+        // Переключение языка (заглушка)
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            alert('Переключение языка пока не реализовано.');
+        });
+    </script>
+</body>
+</html>
