@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
 
-                document.querySelector("a[href='index.html']").textContent = data.nav.home;
-                document.querySelector("a[href='about.html']").textContent = data.nav.about;
-                document.querySelector("a[href='contact.html']").textContent = data.nav.contact;
+                //document.querySelector("a[href='index.html']").textContent = data.nav.home;
+                //document.querySelector("a[href='about.html']").textContent = data.nav.about;
+                //document.querySelector("a[href='contact.html']").textContent = data.nav.contact;
 
                 localStorage.setItem("lang", lang);
             })
