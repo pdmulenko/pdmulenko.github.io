@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+<script src="script.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,9 @@
     <header>
         <nav class="navbar">
             <ul class="menu">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="index.html" data-i18n="menu-main">Главная</a></li>
+                <li><a href="about.html" data-i18n="menu-soft">Программы</a></li>
+                <li><a href="contact.html" data-i18n="menu-cv">Резюме</a></li>
             </ul>
             <div class="controls">
                 <button id="theme-toggle">🌞 / 🌙</button>
@@ -22,20 +23,12 @@
     </header>
     
     <main>
-        <h1>Добро пожаловать!</h1>
-        <p>Это пример статического сайта.</p>
+        <h1 data-i18n="fio">Павел Дмитриевич Муленко</h1>
+        <ul>
+            <li data-i18n="desc-teacher">преподаватель олимпиадной математики, методист</li>
+            <li data-i18n="desc-fett">ответственный член методической комиссии по 5-8 классам международной олимпиады «Формула Единства»/«Третье тысячелетие» по математике,</li>
+            <li data-i18n="desc-it">программист-любитель.</li>
+        </ul>
     </main>
-
-    <script>
-        // Переключение темы
-        document.getElementById('theme-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-        });
-        
-        // Переключение языка (заглушка)
-        document.getElementById('lang-toggle').addEventListener('click', function() {
-            alert('Переключение языка пока не реализовано.');
-        });
-    </script>
 </body>
 </html>
