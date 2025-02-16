@@ -30,7 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     loadLanguage(currentLang);
-
+    
+    // === Переключение темы ===
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+    });
+    
     // === Анимация появления блоков ===
     const fadeInElements = document.querySelectorAll(".fade-in");
 
