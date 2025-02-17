@@ -11,6 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
     themeSwitch.checked = currentTheme === "dark";
     langSwitch.checked = currentLang === "en";
 
+    function loadLanguage(lang) {
+        fetch(`lang/${lang}.json`)
+            .then(response => response.json())
+            .then(data => {
+                document.title = data.title;
+
+                document.querySelectorAll("[data-i18n]").forEach(element => {
+                    let key = element.getAttribute("data-i18n");
+                    if (data[key]) {
+                        element.textContent = data[key];
+                    }
+                });
+
+                //document.querySelector("a[href='index.html']").textContent = data.nav.home;
+                //document.querySelector("a[href='about.html']").textContent = data.nav.about;
+                //document.querySelector("a[href='contact.html']").textContent = data.nav.contact;
+
+                localStorage.setItem("lang", lang);
+            })
+            .catch(error => console.error("Ошибка загрузки языка:", error));
+    }
+
     // Переключение темы
     themeSwitch.addEventListener("change", () => {
         const newTheme = themeSwitch.checked ? "dark" : "light";

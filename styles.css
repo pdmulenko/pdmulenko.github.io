@@ -29,8 +29,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.controls {
+    display: flex;
 }
 
 .menu {
@@ -50,21 +54,6 @@ header {
     font-weight: bold;
 }
 
-.controls button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    background: #fff;
-    color: #0073e6;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.controls button:hover {
-    background: #e0e0e0;
-}
-
 /* Адаптивность */
 
 @media (max-width: 600px) {
@@ -73,7 +62,7 @@ header {
         align-items: center;
     }
 
-    .menu {
+    .menu, .controls {
         flex-direction: column;
         text-align: center;
     }
@@ -94,8 +83,9 @@ header {
 
 .image-text img {
     width: 40%;
+    max-width: 300px;
     height: auto;
-    border-radius: 10px; /* Закруглим углы */
+    border-radius: 40px; /* Закруглим углы */
 }
 
 .image-text .text {
@@ -114,8 +104,12 @@ header {
         text-align: center;
     }
 
-    .image-text img, .image-text .text {
+    .image-text .text {
         width: 100%;
+    }
+
+    .image-text img {
+        width: 60%;
     }
 }
 
@@ -138,6 +132,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 0 10px;
 }
 
 /* Контейнер для слайдера */
