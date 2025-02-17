@@ -4,9 +4,11 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    width: 100%;
     background-color: #ffffff;
     color: #333;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -29,6 +31,7 @@ main {
 header {
     background: #0073e6;
     padding: 10px;
+    width: 100%;
 }
 
 .navbar {
@@ -62,19 +65,20 @@ header {
 
 /* Адаптивность */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .navbar {
         flex-direction: column;
         align-items: center;
     }
 
-    .menu, .controls {
+    .controls {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .menu li {
-        margin: 5px 0;
+        margin: 20px;
     }
 }
 
@@ -212,3 +216,46 @@ line-height: 1em; }
     background-image: url(img/gbr.svg); }
 .flag-icon-rus {
     background-image: url(img/rus.svg); }
+
+/* горизонтальные карты */
+
+.section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}

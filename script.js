@@ -23,6 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         element.textContent = data[key];
                     }
                 });
+                
+                document.querySelectorAll('.menu a').forEach(link => {
+                    const newHref = link.getAttribute(`data-${lang}`);
+                    if (newHref) {
+                        link.href = newHref;
+                    }
+                });
 
                 //document.querySelector("a[href='index.html']").textContent = data.nav.home;
                 //document.querySelector("a[href='about.html']").textContent = data.nav.about;

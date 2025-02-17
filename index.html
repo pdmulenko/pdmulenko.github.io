@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>P. Mulenko</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -11,18 +11,18 @@
     <header>
         <nav class="navbar">
             <ul class="menu">
-                <li><a href="index.html" data-i18n="menu-main">Главная</a></li>
-                <li><a href="about.html" data-i18n="menu-soft">Программы</a></li>
-                <li><a href="contact.html" data-i18n="menu-cv">Резюме</a></li>
+                <li><a href="index.html" data-i18n="menu-main"></a></li>
+                <li><a href="about.html" data-i18n="menu-soft"></a></li>
+                <li><a href="contact.html" data-i18n="menu-cv"></a></li>
             </ul>
             <div class="controls">
                 <div class="switch-container">
-                    <span data-i18n="theme-light">🌞 Светлый</span>
+                    <span data-i18n="theme-light"></span>
                     <label class="switch">
                         <input type="checkbox" id="theme-switch">
                         <span class="slider round"></span>
                     </label>
-                    <span data-i18n="theme-dark">Тёмный 🌙</span>
+                    <span data-i18n="theme-dark"></span>
                 </div>
                 
                 <div class="switch-container">
@@ -39,16 +39,50 @@
     
     <main>
         <section class="image-text">
-            <img src="img/ava.png" alt="Profile picture">
+            <img src="img/ava.jpg" alt="Profile picture">
             <div class="text">
-                <h1 data-i18n="fio">Павел Дмитриевич Муленко</h1>
-                <ul>
-                    <li data-i18n="desc-teacher">преподаватель олимпиадной математики, методист</li>
-                    <li data-i18n="desc-fett">ответственный член методической комиссии по 5-8 классам международной олимпиады «Формула Единства»/«Третье тысячелетие» по математике,</li>
-                    <li data-i18n="desc-it">программист-любитель.</li>
-                </ul>
+                <h1 data-i18n="about"></h1>
+                <p data-i18n="fio"></p>
+                <!-- добавить сюда контакты, наверное -->
             </div>
         </section>
+        <section class="section">
+            <h2 data-i18n="work"></h2>
+            <div class="card-list">
+                <a class="card" href="https://www.mathschool.com/about">
+                    <img src="img/rsm.png" alt="RSM logo">
+                    <p class="title" data-i18n="desc-rsm"></p>
+                    <p data-i18n="desc-teacher"></p>
+                </a>
+                <a class="card" data-ru="https://www.formulo.org/ru/olymp/" data-en="https://www.formulo.org/en/olymp/">
+                    <img src="img/fett.png" alt="Olympiad logo">
+                    <p class="title" data-i18n="desc-fett"></p>
+                    <p data-i18n="desc-methodologist"></p>
+                </a>
+            </div>
+            <p data-i18n="desc-it"></p>
+        </section>
+        
+        <section class="section">
+            <h2 data-i18n="education"></h2>
+            <div class="card-list">
+                <a class="card" data-ru="https://www.spbstu.ru/" data-en="https://english.spbstu.ru/">
+                    <img src="img/spbpu.jpg" alt="SPbPU logo">
+                    <p class="title" data-i18n="edu-spbpu"></p>
+                    <p data-i18n="edu-ftk"></p>
+                    <p data-i18n="edu-sysanalisys"></p>
+                    <p data-i18n="edu-drop"></p>
+                </a>
+                <a class="card" data-ru="https://pskgu.ru/" data-en="https://en.pskgu.ru/en/">
+                    <img src="img/pskgu.jpg" alt="PskGU logo">
+                    <p class="title" data-i18n="edu-pskov"></p>
+                    <p data-i18n="edu-fmf"></p>
+                    <p data-i18n="edu-mathteacher"></p>
+                    <p data-i18n="edu-bak"></p>
+                </a>
+            </div>
+        </section>
+        
     </main>
 </body>
 <script src="script.js"></script>
