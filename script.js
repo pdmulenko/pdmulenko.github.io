@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("Ошибка загрузки языка:", error));
     }
 
+    loadLanguage(currentLang)
+
     // Переключение темы
     themeSwitch.addEventListener("change", () => {
         const newTheme = themeSwitch.checked ? "dark" : "light";
