@@ -15,19 +15,39 @@
                 <li><a href="contact.html" data-i18n="menu-cv">Резюме</a></li>
             </ul>
             <div class="controls">
-                <button id="theme-toggle">🌞 / 🌙</button>
-                <button id="lang-toggle">RU / EN</button>
+                <div class="switch-container">
+                    <span data-i18n="theme-light">🌞 Светлый</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider round"></span>
+                    </label>
+                    <span data-i18n="theme-dark">Тёмный 🌙</span>
+                </div>
+                
+                <div class="switch-container">
+                    <span class="flag-icon flag-icon-rus" data-i18n="lang-rus">RUS</span>
+                    <label class="switch">
+                        <input type="checkbox" id="lang-switch">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="flag-icon flag-icon-gbr" data-i18n="lang-eng">ENG</span>
+                </div>                
             </div>
         </nav>
     </header>
     
     <main>
-        <h1 data-i18n="fio">Павел Дмитриевич Муленко</h1>
-        <ul>
-            <li data-i18n="desc-teacher">преподаватель олимпиадной математики, методист</li>
-            <li data-i18n="desc-fett">ответственный член методической комиссии по 5-8 классам международной олимпиады «Формула Единства»/«Третье тысячелетие» по математике,</li>
-            <li data-i18n="desc-it">программист-любитель.</li>
-        </ul>
+        <section class="image-text">
+            <img src="img/ava.png" alt="Profile picture">
+            <div class="text">
+                <h1 data-i18n="fio">Павел Дмитриевич Муленко</h1>
+                <ul>
+                    <li data-i18n="desc-teacher">преподаватель олимпиадной математики, методист</li>
+                    <li data-i18n="desc-fett">ответственный член методической комиссии по 5-8 классам международной олимпиады «Формула Единства»/«Третье тысячелетие» по математике,</li>
+                    <li data-i18n="desc-it">программист-любитель.</li>
+                </ul>
+            </div>
+        </section>
     </main>
 </body>
 <script src="script.js"></script>

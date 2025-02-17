@@ -1,39 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const langToggle = document.getElementById("lang-toggle");
+    // === Переключение языка и темы
+    const themeSwitch = document.getElementById("theme-switch");
+    const langSwitch = document.getElementById("lang-switch");
+
+    // Загружаем сохраненные настройки
+    let currentTheme = localStorage.getItem("theme") || "light";
     let currentLang = localStorage.getItem("lang") || "ru";
 
-    function loadLanguage(lang) {
-        fetch(`lang/${lang}.json`)
-            .then(response => response.json())
-            .then(data => {
-                document.title = data.title;
+    document.body.classList.toggle("dark-mode", currentTheme === "dark");
+    themeSwitch.checked = currentTheme === "dark";
+    langSwitch.checked = currentLang === "en";
 
-                document.querySelectorAll("[data-i18n]").forEach(element => {
-                    let key = element.getAttribute("data-i18n");
-                    if (data[key]) {
-                        element.textContent = data[key];
-                    }
-                });
-
-                //document.querySelector("a[href='index.html']").textContent = data.nav.home;
-                //document.querySelector("a[href='about.html']").textContent = data.nav.about;
-                //document.querySelector("a[href='contact.html']").textContent = data.nav.contact;
-
-                localStorage.setItem("lang", lang);
-            })
-            .catch(error => console.error("Ошибка загрузки языка:", error));
-    }
-
-    langToggle.addEventListener("click", () => {
-        currentLang = currentLang === "ru" ? "en" : "ru";
-        loadLanguage(currentLang);
+    // Переключение темы
+    themeSwitch.addEventListener("change", () => {
+        const newTheme = themeSwitch.checked ? "dark" : "light";
+        document.body.classList.toggle("dark-mode", themeSwitch.checked);
+        localStorage.setItem("theme", newTheme);
     });
 
-    loadLanguage(currentLang);
-    
-    // === Переключение темы ===
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
+    // Переключение языка
+    langSwitch.addEventListener("change", () => {
+        const newLang = langSwitch.checked ? "en" : "ru";
+        localStorage.setItem("lang", newLang);
+        loadLanguage(newLang);
     });
     
     // === Анимация появления блоков ===
