@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
                 
-                document.querySelectorAll('.menu a').forEach(link => {
+                document.querySelectorAll('a').forEach(link => {
                     const newHref = link.getAttribute(`data-${lang}`);
                     if (newHref) {
                         link.href = newHref;

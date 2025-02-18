@@ -4,8 +4,23 @@
   "menu-cv": "CV",
   "theme-light": "🌞 Light",
   "theme-dark": "Dark 🌙",
-  "fio": "Pavel Mulenko",
-  "desc-teacher": "Olympiad mathematics teacher, methodologist,",
-  "desc-fett": "chief member of the methodological commission for grades 5-8 of the international Olympiad «Formula of Unity»/«Third Millennium» in mathematics,",
-  "desc-it": "amateur programmer."
+
+  "about": "About",
+  "surname": "Mulenko",
+  "firstname": "Pavel",
+  "work": "Work",
+  "desc-teacher": "olympiad mathematics teacher, methodologist",
+  "desc-rsm": "Russian School of Mathematics",
+  "desc-methodologist": "responsible methodologist for grades 5-8",
+  "desc-fett": "international olympiad «Formula of Unity»/«The Third Millennium» in mathematics",
+  "desc-it": "I also enjoy programming and software development.",
+  "education": "Education",
+  "edu-drop": "incomplete higher education (2011 &mdash; 2015)",
+  "edu-spbpu": "Peter the Great St. Petersburg Polytechnic University",
+  "edu-ftk": "Faculty of Technical Cybernetics",
+  "edu-sysanalysis": "specialty 27.03.03 «System Analysis and Control»",
+  "edu-bak": "bachelor's degree (2020 &mdash; 2024)",
+  "edu-pskov": "Pskov State University",
+  "edu-fmf": "Institute of Physics, Mathematics and Information Technologies",
+  "edu-mathteacher": "specialty 44.03.01 «Pedagogical Education» in mathematics"
 }
