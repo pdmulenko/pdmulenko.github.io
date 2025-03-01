@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const langSwitch = document.getElementById("lang-switch");
 
     // Загружаем сохраненные настройки
-    let currentTheme = localStorage.getItem("theme") || "light";
+    let currentTheme = localStorage.getItem("theme") || "dark";
     let currentLang = localStorage.getItem("lang") || "ru";
 
     document.body.classList.toggle("dark-mode", currentTheme === "dark");
