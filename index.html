@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Mulenko</title>
+    <title data-i18n="title">Павел Муленко</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5ea1e286d5.js" crossorigin="anonymous"></script>
@@ -13,26 +13,31 @@
         <nav class="navbar">
             <ul class="menu">
                 <li><a href="index.html" data-i18n="menu-main"></a></li>
-                <li><a href="portfolio.html" data-i18n="menu-portfolio"></a></li>
-                <li><a href="#" data-i18n="menu-cv"></a></li>
+                <li><a href="publications.html" data-i18n="menu-publications"></a></li>
+                <li><a href="applications.html" data-i18n="menu-applications"></a></li>
+                <li><a href="teaching.html" data-i18n="menu-teaching"></a></li>
             </ul>
             <div class="controls">
                 <div class="switch-container">
-                    <span data-i18n="theme-light"><i class="fa-solid fa-sun"></i></span>
+                    <i class="fa-solid fa-sun"></i>
+                    <span data-i18n="theme-light"></span>
                     <label class="switch">
                         <input type="checkbox" id="theme-switch">
                         <span class="slider round"></span>
                     </label>
-                    <span data-i18n="theme-dark"><i class="fa-solid fa-moon"></i></span>
+                    <span data-i18n="theme-dark"></span>
+                    <i class="fa-solid fa-moon"></i>
                 </div>
                 
                 <div class="switch-container">
-                    <span class="flag-icon flag-icon-rus"></span> <span>Русский</span>
+                    <span class="flag-icon flag-icon-rus"></span>
+                    <span>Русский</span>
                     <label class="switch">
                         <input type="checkbox" id="lang-switch">
                         <span class="slider round"></span>
                     </label>
-                    <span>English</span> <span class="flag-icon flag-icon-gbr"></span>
+                    <span>English</span>
+                    <span class="flag-icon flag-icon-gbr"></span>
                 </div>                
             </div>
         </nav>
@@ -72,7 +77,7 @@
                     <p data-i18n="desc-methodologist"></p>
                 </a>
             </div>
-            <p data-i18n="desc-it"></p>
+            <!--<p data-i18n="desc-it"></p>-->
         </section>
         
         <section class="section fade-in">

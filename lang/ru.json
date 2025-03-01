@@ -1,7 +1,9 @@
 {
+  "title": "Павел Муленко",
   "menu-main": "Главная",
-  "menu-soft": "Программы",
-  "menu-cv": "Резюме",
+  "menu-publications": "Публикации",
+  "menu-applications": "Приложения",
+  "menu-teaching": "Преподавание",
   "theme-light": "Светлый",
   "theme-dark": "Тёмный",
 

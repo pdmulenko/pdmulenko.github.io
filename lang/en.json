@@ -1,7 +1,9 @@
 {
+  "title": "Paul Mulenko",
   "menu-main": "Home",
-  "menu-soft": "My apps",
-  "menu-cv": "CV",
+  "menu-publications": "Publications",
+  "menu-applications": "Apps",
+  "menu-teaching": "Teaching",
   "theme-light": "Light",
   "theme-dark": "Dark",
 
@@ -21,21 +23,21 @@
   "edu-fmf": "Institute of Physics, Mathematics and Information Technologies",
   "edu-mathteacher": "specialty 44.03.01 «Pedagogical Education» in mathematics",
 
-  "papers": "Scientific Papers",
-  "istina": "IAS 'ISTINA'",
+  "papers": "Publications",
+  "istina": "CRIS 'ISTINA'",
   "teaching-videos": "Youth for Science. 2024",
   "teaching-videos-title": "Behind the Scenes of Education: The Diversity of Educational Video Genres",
-  "teaching-videos-authors": "Mulenko P. D.",
+  "teaching-videos-authors": "Mulenko P.",
   "teaching-videos-date": "April 24-25, 2024",
   "function-problems": "Youth for Science. 2023",
   "function-problems-title": "Problems on the Topic 'Functions, Properties of Functions' in Mathematical Competitions: School Expectations vs. Reality",
-  "function-problems-authors": "Mulenko P. D.",
+  "function-problems-authors": "Mulenko P.",
   "function-problems-date": "April 3-8, 2023",
   "quantum-dots": "XL Science Week at SPbPU",
-  "quantum-dots-title": "Software Processing and Analysis of Si/Ge Quantum Dot Images Obtained by Atomic Force Microscopy",
-  "quantum-dots-authors": "Alekseeva A. M., Mulenko P. D.",
+  "quantum-dots-title": "Program Processing and Analysis of the Quantum Dot Si/Ge Depiction Received by Atomic-Force Microscope",
+  "quantum-dots-authors": "Alekseeva A., Mulenko P.",
   "quantum-dots-date": "December 5-10, 2011",
   "quantum-dots-zip": "Project",
-  "quantum-dots-ibkspbpu": "ILC SPbPU"
+  "quantum-dots-ibkspbpu": "CRIS SPbPU"
 
 }
