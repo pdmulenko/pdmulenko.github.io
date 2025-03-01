@@ -2,8 +2,8 @@
   "menu-main": "Home",
   "menu-soft": "My apps",
   "menu-cv": "CV",
-  "theme-light": "🌞 Light",
-  "theme-dark": "Dark 🌙",
+  "theme-light": "Light",
+  "theme-dark": "Dark",
 
   "work": "Work",
   "desc-teacher": "Olympiad mathematics teacher, methodologist",
@@ -19,5 +19,23 @@
   "edu-bak": "bachelor's degree (2020—2024)",
   "edu-pskov": "Pskov State University",
   "edu-fmf": "Institute of Physics, Mathematics and Information Technologies",
-  "edu-mathteacher": "specialty 44.03.01 «Pedagogical Education» in mathematics"
+  "edu-mathteacher": "specialty 44.03.01 «Pedagogical Education» in mathematics",
+
+  "papers": "Scientific Papers",
+  "istina": "IAS 'ISTINA'",
+  "teaching-videos": "Youth for Science. 2024",
+  "teaching-videos-title": "Behind the Scenes of Education: The Diversity of Educational Video Genres",
+  "teaching-videos-authors": "Mulenko P. D.",
+  "teaching-videos-date": "April 24-25, 2024",
+  "function-problems": "Youth for Science. 2023",
+  "function-problems-title": "Problems on the Topic 'Functions, Properties of Functions' in Mathematical Competitions: School Expectations vs. Reality",
+  "function-problems-authors": "Mulenko P. D.",
+  "function-problems-date": "April 3-8, 2023",
+  "quantum-dots": "XL Science Week at SPbPU",
+  "quantum-dots-title": "Software Processing and Analysis of Si/Ge Quantum Dot Images Obtained by Atomic Force Microscopy",
+  "quantum-dots-authors": "Alekseeva A. M., Mulenko P. D.",
+  "quantum-dots-date": "December 5-10, 2011",
+  "quantum-dots-zip": "Project",
+  "quantum-dots-ibkspbpu": "ILC SPbPU"
+
 }
