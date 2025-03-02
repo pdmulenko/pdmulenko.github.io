@@ -41,22 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.classList.toggle("lang-en", lang === "en");
                 document.body.classList.toggle("lang-ru", lang === "ru");
 
-                document.querySelectorAll(".lang-en").forEach(el => {
-                    el.style.display = lang === "en" ? "block" : "none";
+                document.querySelectorAll(".lang-en, .lang-ru").forEach(el => {
+                    el.classList.remove("visible");
                 });
-
-                document.querySelectorAll(".lang-ru").forEach(el => {
-                    el.style.display = lang === "ru" ? "block" : "none";
-                });
+            
+                if (window.innerWidth <= 800) { // Apply hiding only on mobile
+                    document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+                        el.classList.add("visible");
+                    });
+                }
 
                 localStorage.setItem("lang", lang);
             })
             .catch(error => console.error("Ошибка загрузки языка:", error));
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-        loadLanguage(currentLang);
-    });
+    loadLanguage(currentLang);
 
     // Переключение темы
     themeSwitch.addEventListener("change", () => {

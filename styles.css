@@ -186,12 +186,12 @@ header {
         order: -1; /* Перемещаем фото наверх */
     }
 
-    .lang-en .intro-text.left {
+    .lang-ru.visible, .lang-en.visible {
         display: block;
     }
 
-    .lang-ru .intro-text.right {
-        display: block;
+    .lang-ru, .lang-en {
+        display: none;
     }
 }
 
