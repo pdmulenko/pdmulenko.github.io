@@ -31,6 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
 
+                document.querySelectorAll('img').forEach(img => {
+                    const newSrc = img.getAttribute(`data-${lang}`);
+                    if (newSrc) {
+                        img.src = newSrc;
+                    }
+                });                
+
                 //document.querySelector("a[href='index.html']").textContent = data.nav.home;
                 //document.querySelector("a[href='about.html']").textContent = data.nav.about;
                 //document.querySelector("a[href='contact.html']").textContent = data.nav.contact;

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Павел Муленко</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5ea1e286d5.js" crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="index.html" data-i18n="menu-main"></a></li>
+                <li><a href="publications.html" data-i18n="menu-publications"></a></li>
+                <li><a href="applications.html" data-i18n="menu-applications"></a></li>
+                <li><a href="#" data-i18n="menu-teaching"></a></li> <!--teaching.html-->
+            </ul>
+            <div class="controls">
+                <div class="switch-container">
+                    <i class="fa-solid fa-sun"></i>
+                    <span data-i18n="theme-light"></span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span data-i18n="theme-dark"></span>
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                
+                <div class="switch-container">
+                    <span class="flag-icon flag-icon-rus"></span>
+                    <span>Русский</span>
+                    <label class="switch">
+                        <input type="checkbox" id="lang-switch">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>English</span>
+                    <span class="flag-icon flag-icon-gbr"></span>
+                </div>                
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="section">
+            <h1 data-i18n="applications"></h2>
+            <div class="card-list">
+                <div class="card">
+                    <img src="img/app-hat.png" alt="Hat app logo">
+                    <p class="title" data-i18n="app-hat"></p>
+                    <p style="font-style:italic;" data-i18n="app-hat-desc"></p>
+                    <p data-i18n="app-hat-ver"></p>
+                    <div class="links">
+                        <a href="https://apps.microsoft.com/detail/9NBLGGH4QV44" class="ms-link" target="_blank"><i class="fa-brands fa-microsoft"></i><span data-i18n="ms-store"></span></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/app-boardgame.png" alt="Boardgame app logo">
+                    <p class="title" data-i18n="app-boardgame"></p>
+                    <p style="font-style:italic;" data-i18n="app-boardgame-desc"></p>
+                    <p data-i18n="app-boardgame-ver"></p>
+                    <div class="links">
+                        <a href="./files/MathTableAppCLR v3.1.exe" class="external-link" target="_blank"><i class="fa-solid fa-window-maximize"></i><span>EXE</span></a>
+                        <p class="no-link"><i class="fa-brands fa-microsoft"></i><span data-i18n="ms-store"></span></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/app-multicash.png" alt="Multicash Tracker app logo">
+                    <p class="title" data-i18n="app-multicash"></p>
+                    <p style="font-style:italic;" data-i18n="app-multicash-desc"></p>
+                    <p data-i18n="app-multicash-ver"></p>
+                    <div class="links">
+                        <p class="no-link"><i class="fa-brands fa-google-play"></i><span data-i18n="google-play"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

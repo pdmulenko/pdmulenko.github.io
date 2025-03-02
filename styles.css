@@ -409,11 +409,11 @@ line-height: 1em; }
     font-style: italic;
 }
 
-.links {
+.btn-links {
     margin-top: 10px;
 }
 
-.links a {
+.btn-links a {
     display: inline-block;
     padding: 10px 20px;
     margin-right: 15px;
@@ -425,28 +425,49 @@ line-height: 1em; }
     transition: background-color 0.3s;
 }
 
-.links i {
+.btn-links i {
     margin-right: 10px;
 }
 
-.links a:hover {
+.btn-links a:hover {
     background-color: #00478d;
 }
 
-.links .pdf-link {
+.btn-links .pdf-link {
     background-color: #d32f2f;
 }
 
-.links .pdf-link:hover {
+.btn-links .pdf-link:hover {
     background-color: #b71c1c;
 }
 
-.links .app-link {
+.btn-links .app-link {
     background-color: #28a745;
 }
 
-.links .app-link:hover {
+.btn-links .app-link:hover {
     background-color: #1e7e34;
+}
+
+.btn-links .ms-link {
+    background-color: black;
+}
+
+.btn-links .no-link {
+    background-color: gray;
+}
+
+.btn-links .ms-link:hover {
+    background-color: #333;
+}
+
+.dark-mode .btn-links .ms-link {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode .btn-links .ms-link:hover {
+    background-color: #f8f8f8;
 }
 
 @media (max-width: 600px) {
@@ -454,7 +475,7 @@ line-height: 1em; }
         padding: 10px;
     }
 
-    .links a {
+    .btn-links a {
         display: block;
         margin-bottom: 5px;
     }
