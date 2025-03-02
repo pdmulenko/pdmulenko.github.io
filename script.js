@@ -38,16 +38,25 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });                
 
-                //document.querySelector("a[href='index.html']").textContent = data.nav.home;
-                //document.querySelector("a[href='about.html']").textContent = data.nav.about;
-                //document.querySelector("a[href='contact.html']").textContent = data.nav.contact;
+                document.body.classList.toggle("lang-en", lang === "en");
+                document.body.classList.toggle("lang-ru", lang === "ru");
+
+                document.querySelectorAll(".lang-en").forEach(el => {
+                    el.style.display = lang === "en" ? "block" : "none";
+                });
+
+                document.querySelectorAll(".lang-ru").forEach(el => {
+                    el.style.display = lang === "ru" ? "block" : "none";
+                });
 
                 localStorage.setItem("lang", lang);
             })
             .catch(error => console.error("Ошибка загрузки языка:", error));
     }
 
-    loadLanguage(currentLang)
+    document.addEventListener("DOMContentLoaded", () => {
+        loadLanguage(currentLang);
+    });
 
     // Переключение темы
     themeSwitch.addEventListener("change", () => {
