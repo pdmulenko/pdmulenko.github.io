@@ -38,18 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });                
 
-                //document.body.classList.toggle("lang-en", lang === "en");
-                //document.body.classList.toggle("lang-ru", lang === "ru");
-
                 document.querySelectorAll(".lang-en, .lang-ru").forEach(el => {
                     el.classList.remove("visible");
                 });
             
-                if (window.innerWidth <= 800) { // Apply hiding only on mobile
-                    document.querySelectorAll(`.lang-${lang}`).forEach(el => {
-                        el.classList.add("visible");
-                    });
-                }
+                document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+                    el.classList.add("visible");
+                });
 
                 localStorage.setItem("lang", lang);
             })

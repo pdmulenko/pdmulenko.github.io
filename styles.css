@@ -537,9 +537,9 @@ line-height: 1em; }
 }
 
 @media (max-width: 900px) {
-    .btn-links a {
+    .btn-links a, .btn-links p {
         display: block;
-        margin-bottom: 5px;
+        margin: 10px 0 0 0;
         width: 100%;
         padding: 10px 0;
     }
