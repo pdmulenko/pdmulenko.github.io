@@ -413,18 +413,18 @@ line-height: 1em; }
     margin-top: 10px;
 }
 
-.btn-links a, p {
+.btn-links a, .btn-links p {
     display: inline-block;
     padding: 10px 20px;
     margin-right: 15px;
     text-decoration: none;
     color: white;
-    background-color: #2196F3;
     border-radius: 5px;
     font-size: 20px;
 }
 
 .btn-links a {
+    background-color: #2196F3;
     transition: background-color 0.3s;
 }
 
@@ -456,7 +456,7 @@ line-height: 1em; }
     background-color: black;
 }
 
-.btn-links .no-link {
+.btn-links p {
     background-color: gray;
 }
 
