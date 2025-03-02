@@ -51,5 +51,24 @@
   "app-boardgame-ver": "Version 3.1, December 2023",
   "app-multicash": "Multicash Tracker",
   "app-multicash-desc": "Track your finances effortlessly in multiple currencies with MultiCash Tracker!",
-  "app-multicash-ver": "The first release is coming in 2025"
+  "app-multicash-ver": "The first release is coming in 2025",
+
+  "teaching-qualify": "Teaching Qualification",
+  "qualify-bachelor": "Bachelor's Degree (with Honors)",
+  "qualify-profession": "44.03.01 Pedagogical Education",
+  "qualify-number": "106004 0002310",
+  "qualify-date": "July 3, 2024",
+  "qualify-check": "FIS FRDoE",
+  "award-title1": "Laureate of the St. Petersburg Government Award",
+  "award-title2": "for mentor teachers who trained winners and prizewinners of international and all-Russian school olympiads",
+  "award-date": "November 2, 2022",
+  "award-check": "Post on the Committee on Education website",
+  "teaching-projects": "Author's Developments",
+  "course-title": "Online Course on Combinatorics and Probability Theory",
+  "course-desc": "20 lessons (in Russian) consisting of video materials and text inserts with assessment tests at the end of each lesson",
+  "course-free": "The course is available for free on the platform of the socio-educational program 'Formula of Unity'",
+  "course-grant": "Developed with the support of the Presidential Grants Foundation (PGF)",
+  "course-teaser": "Course teaser",
+  "course-join": "Take the course",
+  "course-fpg": "Project on the PGF website"
 }

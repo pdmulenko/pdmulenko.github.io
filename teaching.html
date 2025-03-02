@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Павел Муленко</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5ea1e286d5.js" crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="index.html" data-i18n="menu-main"></a></li>
+                <li><a href="publications.html" data-i18n="menu-publications"></a></li>
+                <li><a href="applications.html" data-i18n="menu-applications"></a></li>
+                <li><a href="teaching.html" data-i18n="menu-teaching"></a></li>
+            </ul>
+            <div class="controls">
+                <div class="switch-container">
+                    <i class="fa-solid fa-sun"></i>
+                    <span data-i18n="theme-light"></span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span data-i18n="theme-dark"></span>
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                
+                <div class="switch-container">
+                    <span class="flag-icon flag-icon-rus"></span>
+                    <span>Русский</span>
+                    <label class="switch">
+                        <input type="checkbox" id="lang-switch">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>English</span>
+                    <span class="flag-icon flag-icon-gbr"></span>
+                </div>                
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="section">
+            <h1 data-i18n="teaching-qualify"></h1>
+            <div class="card-list">
+                <div class="card">
+                    <p class="title" data-i18n="qualify-bachelor"></p>
+                    <p data-i18n="qualify-profession"></p>
+                    <p data-i18n="qualify-number"></p>
+                    <p style="font-style:italic;" data-i18n="qualify-date"></p>
+                    <div class="btn-links">
+                        <a href="./files/mulenko-diploma.pdf" class="pdf-link" target="_blank"><i class="fa-solid fa-file"></i><span>PDF</span></a>
+                        <a href="https://obrnadzor.gov.ru/gosudarstvennye-uslugi-i-funkczii/7701537808-gosfunction/formirovanie-i-vedenie-federalnogo-reestra-svedenij-o-dokumentah-ob-obrazovanii-i-ili-o-kvalifikaczii-dokumentah-ob-obuchenii/" class="external-link" target="_blank"><i class="fa-solid fa-user-check"></i><span data-i18n="qualify-check"></span></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="title" data-i18n="award-title1"></p>
+                    <p data-i18n="award-title2"></p>
+                    <div class="btn-links">
+                        <a href="./files/mulenko-award.pdf" class="pdf-link" target="_blank"><i class="fa-solid fa-file"></i><span>PDF</span></a>
+                        <a href="https://k-obr.spb.ru/o-komitete/news/71607/" class="external-link" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i><span data-i18n="award-check"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in">
+            <h1 data-i18n="teaching-project"></h1>
+            <div class="publication-list">
+                <div class="publication-img">
+                    <img src="img/course.png" alt="Online-course screenshot">
+                    <div class="publication">
+                        <h3 data-i18n="course-title"></h3>
+                        <p class="authors" data-i18n="course-desc"></p>
+                        <p class="title" data-i18n="course-free"></p>
+                        <p class="date" data-i18n="course-grant"></p>
+                        <div class="btn-links">
+                            <a href="https://vk.com/wall55863403_2969" class="pdf-link" target="_blank"><i class="fa-solid fa-film"></i><span data-i18n="course-teaser"></span></a>
+                            <a href="https://www.formulo.org/ru/kruzhki/online-courses/" class="app-link" target="_blank"><i class="fa-solid fa-right-to-bracket"></i><span data-i18n="course-join"></span></a>
+                            <a href="https://xn--80afcdbalict6afooklqi5o.xn--p1ai/public/application/item?id=E72EBE2A-D7C7-4395-AA8E-C14AB0B4639B" class="external-link" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i><span data-i18n="course-fpg"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
