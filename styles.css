@@ -382,7 +382,8 @@ line-height: 1em; }
 @media (max-width: 450px) {
     .card img {
         max-height: 150px;
-        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -411,9 +412,9 @@ line-height: 1em; }
 
 .publication {
     background: var(--card-bg, #f8f8f8);
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease-in-out;
 }
 
@@ -458,12 +459,13 @@ line-height: 1em; }
 
 .btn-links {
     margin-top: 10px;
+    width: 100%;
 }
 
 .btn-links a, .btn-links p {
     display: inline-block;
     padding: 10px 20px;
-    margin-right: 15px;
+    margin: 0 15px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
@@ -535,12 +537,10 @@ line-height: 1em; }
 }
 
 @media (max-width: 900px) {
-    .publication {
-        padding: 10px;
-    }
-
     .btn-links a {
         display: block;
         margin-bottom: 5px;
+        width: 100%;
+        padding: 10px 0;
     }
 }
