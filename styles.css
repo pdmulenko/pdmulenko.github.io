@@ -81,6 +81,7 @@ header {
         text-align: center;
         align-items: center;
         gap: 10px;
+        margin-top: 10px;
     }
 
     .menu li {
@@ -98,6 +99,7 @@ header {
     .menu li {
         width: 50%;
         text-align: center;
+        margin: 10px 0;
     }
 }
 
@@ -412,7 +414,7 @@ line-height: 1em; }
 }
 
 .publication-img > img {
-    width: 200px;
+    width: 350px;
     object-fit: cover;
 }
 
@@ -496,6 +498,12 @@ line-height: 1em; }
 
 .dark-mode .btn-links .ms-link:hover {
     background-color: #f8f8f8;
+}
+
+@media (max-width: 1200px) {
+    .publication-img {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 900px) {
