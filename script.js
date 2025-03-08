@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll("[data-i18n]").forEach(element => {
                     let key = element.getAttribute("data-i18n");
                     if (data[key]) {
-                        element.textContent = data[key];//.replace(/\n/g, "<br>");
+                        element.textContent = data[key].replace(/\n/g, "<br>");
                     }
                 });
                 
