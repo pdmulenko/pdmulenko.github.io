@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll("[data-i18n]").forEach(element => {
                     let key = element.getAttribute("data-i18n");
                     if (data[key]) {
-                        element.textContent = data[key].replace(/\n/g, "<br>");
+                        element.innnerHTML = data[key].replace(/\n/g, "<br>");
                     }
                 });
                 
@@ -45,6 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll(`.lang-${lang}`).forEach(el => {
                     el.classList.add("visible");
                 });
+
+                if (lang === "ru") {
+                    document.querySelector("meta[property='og:title']").setAttribute("content", "Личный сайт Павла Муленко");
+                } else {
+                    document.querySelector("meta[property='og:title']").setAttribute("content", "Personal website of Paul Mulenko");
+                }
 
                 localStorage.setItem("lang", lang);
             })
