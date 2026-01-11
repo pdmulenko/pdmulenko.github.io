@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+package-lock.json
+package.json
+
+# Husky
+.husky/_/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# MacOS
+.DS_Store
+
+# Логи и временные файлы
+*.log
+*.tmp

@@ -1,117 +1,204 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Личный сайт Павла Муленко" />
-    <title data-i18n="title">Павел Муленко</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <script>
-        const lang = localStorage.getItem('lang') || (navigator.language.startsWith('ru') ? 'ru' : 'en');
-        const manifestLink = document.createElement('link');
-        manifestLink.rel = 'manifest';
-        manifestLink.href = lang === 'ru' ? 'site-ru.webmanifest' : 'site-en.webmanifest';
-        document.head.appendChild(manifestLink);
-    </script>
-    <script src="https://kit.fontawesome.com/5ea1e286d5.js" crossorigin="anonymous"></script>
-</head>
-<body class="dark-mode">
-    <header>
-        <nav class="navbar">
-            <ul class="menu">
-                <li><a href="index.html" data-i18n="menu-main"></a></li>
-                <li><a href="publications.html" data-i18n="menu-publications"></a></li>
-                <li><a href="applications.html" data-i18n="menu-applications"></a></li>
-                <li><a href="teaching.html" data-i18n="menu-teaching"></a></li>
-            </ul>
-            <div class="controls">
-                <div class="switch-container">
-                    <i class="fa-solid fa-sun"></i>
-                    <span data-i18n="theme-light"></span>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-switch" checked>
-                        <span class="slider round"></span>
-                    </label>
-                    <span data-i18n="theme-dark"></span>
-                    <i class="fa-solid fa-moon"></i>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Личный сайт Павла Муленко" />
+        <title data-i18n="title">Павел Муленко</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <script>
+            const lang =
+                localStorage.getItem("lang") ||
+                (navigator.language.startsWith("ru") ? "ru" : "en");
+            const manifestLink = document.createElement("link");
+            manifestLink.rel = "manifest";
+            manifestLink.href =
+                lang === "ru" ? "site-ru.webmanifest" : "site-en.webmanifest";
+            document.head.appendChild(manifestLink);
+        </script>
+        <script
+            src="https://kit.fontawesome.com/5ea1e286d5.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body class="dark-mode">
+        <header>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li><a href="index.html" data-i18n="menu-main"></a></li>
+                    <li>
+                        <a
+                            href="publications.html"
+                            data-i18n="menu-publications"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="applications.html"
+                            data-i18n="menu-applications"
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="teaching.html" data-i18n="menu-teaching"></a>
+                    </li>
+                </ul>
+                <div class="controls">
+                    <div class="switch-container">
+                        <i class="fa-solid fa-sun"></i>
+                        <span data-i18n="theme-light"></span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-switch" checked />
+                            <span class="slider round"></span>
+                        </label>
+                        <span data-i18n="theme-dark"></span>
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+
+                    <div class="switch-container">
+                        <span class="flag-icon flag-icon-rus"></span>
+                        <span>Русский</span>
+                        <label class="switch">
+                            <input type="checkbox" id="lang-switch" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>English</span>
+                        <span class="flag-icon flag-icon-gbr"></span>
+                    </div>
                 </div>
-                
-                <div class="switch-container">
-                    <span class="flag-icon flag-icon-rus"></span>
-                    <span>Русский</span>
-                    <label class="switch">
-                        <input type="checkbox" id="lang-switch">
-                        <span class="slider round"></span>
-                    </label>
-                    <span>English</span>
-                    <span class="flag-icon flag-icon-gbr"></span>
-                </div>                
-            </div>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="intro">
-            <div class="intro-content">
-                <div class="intro-text left lang-en">
-                    <h1>Mulenko<br>Paul</h1>
-                    <p>Olympiad Math Teacher<br/>International Olympiad Methodologist<br/>Amateur Programmer</p>
-                    <p class="contact"><i class="fa-solid fa-envelope"></i> <a href="mailto:pavel.mulenko@gmail.com">pavel.mulenko@gmail.com</a></p>
-                    <p class="contact"><i class="fa-brands fa-telegram"></i> <a href="https://t.me/theMULYAman">@theMULYAman</a></p>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro">
+                <div class="intro-content">
+                    <div class="intro-text left lang-en">
+                        <h1>Mulenko<br />Paul</h1>
+                        <p>
+                            Olympiad Math Teacher<br />International Olympiad
+                            Methodologist<br />Amateur Programmer
+                        </p>
+                        <p class="contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:pavel.mulenko@gmail.com"
+                                >pavel.mulenko@gmail.com</a
+                            >
+                        </p>
+                        <p class="contact">
+                            <i class="fa-brands fa-telegram"></i>
+                            <a href="https://t.me/theMULYAman">@theMULYAman</a>
+                        </p>
+                    </div>
+                    <div class="intro-photo">
+                        <img src="img/ava.jpg" alt="Paul Mulenko" />
+                    </div>
+                    <div class="intro-text left lang-ru visible">
+                        <h1>Муленко<br />Павел Дмитриевич</h1>
+                        <p>
+                            Преподаватель олимпиадной математики<br />Методист
+                            международной олимпиады<br />Программист-любитель
+                        </p>
+                        <p class="contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:mail@pdmulenko.ru"
+                                >mail@pdmulenko.ru</a
+                            >
+                        </p>
+                        <p class="contact">
+                            <i class="fa-brands fa-vk"></i>
+                            <a href="https://vk.com/themulyaman"
+                                >@theMULYAman</a
+                            >
+                        </p>
+                    </div>
                 </div>
-                <div class="intro-photo">
-                    <img src="img/ava.jpg" alt="Paul Mulenko">
+            </section>
+            <section class="section fade-in">
+                <h2 data-i18n="work"></h2>
+                <div class="card-list">
+                    <a class="card" href="https://www.mathschool.com/about">
+                        <img
+                            src="img/rsm.png"
+                            alt="Logo of Russian School of Mathematics"
+                        />
+                        <p class="title" data-i18n="rsm-title"></p>
+                        <p data-i18n="rsm-position"></p>
+                    </a>
+                    <a
+                        class="card"
+                        href=""
+                        data-ru="https://www.formulo.org/ru/olymp/"
+                        data-en="https://www.formulo.org/en/olymp/"
+                    >
+                        <img
+                            src="img/fett-ru.png"
+                            data-en="img/fett-en.png"
+                            data-ru="img/fett-ru.png"
+                            alt="Logo of International Math Olympiad 'Formula of Unity'/'The Third Millennium'"
+                        />
+                        <p class="title" data-i18n="fett-title"></p>
+                        <p data-i18n="fett-position"></p>
+                    </a>
                 </div>
-                <div class="intro-text left lang-ru visible">
-                    <h1>Муленко<br>Павел Дмитриевич</h1>
-                    <p>Преподаватель олимпиадной математики<br/>Методист международной олимпиады<br/>Программист-любитель</p>
-                    <p class="contact"><i class="fa-solid fa-envelope"></i> <a href="mailto:mail@pdmulenko.ru">mail@pdmulenko.ru</a></p>
-                    <p class="contact"><i class="fa-brands fa-vk"></i> <a href="https://vk.com/themulyaman">@theMULYAman</a></p>
+                <!--<p data-i18n="desc-it"></p>-->
+            </section>
+
+            <section class="section fade-in">
+                <h2 data-i18n="education"></h2>
+                <div class="card-list">
+                    <a
+                        class="card"
+                        href=""
+                        data-ru="https://pskgu.ru/"
+                        data-en="https://en.pskgu.ru/en/"
+                    >
+                        <img
+                            src="img/pskgu.png"
+                            alt="Logo of Pskov State University"
+                        />
+                        <p class="title" data-i18n="pskgu-title"></p>
+                        <p data-i18n="pskgu-dept"></p>
+                        <p data-i18n="pskgu-prof"></p>
+                        <p style="font-style: italic" data-i18n="pskgu-res"></p>
+                    </a>
+                    <a
+                        class="card"
+                        href=""
+                        data-ru="https://www.spbstu.ru/"
+                        data-en="https://english.spbstu.ru/"
+                    >
+                        <img
+                            src="img/spbpu.png"
+                            alt="Logo of St. Petersburg Polytechnic University"
+                        />
+                        <p class="title" data-i18n="spbpu-title"></p>
+                        <p data-i18n="spbpu-dept"></p>
+                        <p data-i18n="spbpu-prof"></p>
+                        <p style="font-style: italic" data-i18n="spbpu-res"></p>
+                    </a>
                 </div>
-            </div>
-        </section>
-        <section class="section fade-in">
-            <h2 data-i18n="work"></h2>
-            <div class="card-list">
-                <a class="card" href="https://www.mathschool.com/about">
-                    <img src="img/rsm.png" alt="Logo of Russian School of Mathematics">
-                    <p class="title" data-i18n="rsm-title"></p>
-                    <p data-i18n="rsm-position"></p>
-                </a>
-                <a class="card" href="" data-ru="https://www.formulo.org/ru/olymp/" data-en="https://www.formulo.org/en/olymp/">
-                    <img src="img/fett-ru.png" data-en="img/fett-en.png" data-ru="img/fett-ru.png" alt="Logo of International Math Olympiad 'Formula of Unity'/'The Third Millennium'">
-                    <p class="title" data-i18n="fett-title"></p>
-                    <p data-i18n="fett-position"></p>
-                </a>
-            </div>
-            <!--<p data-i18n="desc-it"></p>-->
-        </section>
-        
-        <section class="section fade-in">
-            <h2 data-i18n="education"></h2>
-            <div class="card-list">
-                <a class="card" href="" data-ru="https://pskgu.ru/" data-en="https://en.pskgu.ru/en/">
-                    <img src="img/pskgu.png" alt="Logo of Pskov State University">
-                    <p class="title" data-i18n="pskgu-title"></p>
-                    <p data-i18n="pskgu-dept"></p>
-                    <p data-i18n="pskgu-prof"></p>
-                    <p style="font-style:italic;" data-i18n="pskgu-res"></p>
-                </a>
-                <a class="card" href="" data-ru="https://www.spbstu.ru/" data-en="https://english.spbstu.ru/">
-                    <img src="img/spbpu.png" alt="Logo of St. Petersburg Polytechnic University">
-                    <p class="title" data-i18n="spbpu-title"></p>
-                    <p data-i18n="spbpu-dept"></p>
-                    <p data-i18n="spbpu-prof"></p>
-                    <p style="font-style:italic;" data-i18n="spbpu-res"></p>
-                </a>
-            </div>
-        </section>
-        
-    </main>
-</body>
-<script src="script.js"></script>
+            </section>
+        </main>
+    </body>
+    <script src="script.js"></script>
 </html>

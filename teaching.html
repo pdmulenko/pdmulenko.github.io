@@ -1,146 +1,288 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Личный сайт Павла Муленко" />
-    <title data-i18n="title">Павел Муленко</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <script>
-        const lang = localStorage.getItem('lang') || (navigator.language.startsWith('ru') ? 'ru' : 'en');
-        const manifestLink = document.createElement('link');
-        manifestLink.rel = 'manifest';
-        manifestLink.href = lang === 'ru' ? 'site-ru.webmanifest' : 'site-en.webmanifest';
-        document.head.appendChild(manifestLink);
-    </script>
-    <script src="https://kit.fontawesome.com/5ea1e286d5.js" crossorigin="anonymous"></script>
-</head>
-<body class="dark-mode">
-    <header>
-        <nav class="navbar">
-            <ul class="menu">
-                <li><a href="index.html" data-i18n="menu-main"></a></li>
-                <li><a href="publications.html" data-i18n="menu-publications"></a></li>
-                <li><a href="applications.html" data-i18n="menu-applications"></a></li>
-                <li><a href="teaching.html" data-i18n="menu-teaching"></a></li>
-            </ul>
-            <div class="controls">
-                <div class="switch-container">
-                    <i class="fa-solid fa-sun"></i>
-                    <span data-i18n="theme-light"></span>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-switch" checked>
-                        <span class="slider round"></span>
-                    </label>
-                    <span data-i18n="theme-dark"></span>
-                    <i class="fa-solid fa-moon"></i>
-                </div>
-                
-                <div class="switch-container">
-                    <span class="flag-icon flag-icon-rus"></span>
-                    <span>Русский</span>
-                    <label class="switch">
-                        <input type="checkbox" id="lang-switch">
-                        <span class="slider round"></span>
-                    </label>
-                    <span>English</span>
-                    <span class="flag-icon flag-icon-gbr"></span>
-                </div>                
-            </div>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="section">
-            <h1 data-i18n="teaching-qualify"></h1>
-            <div class="card-list">
-                <div class="card">
-                    <p class="title" data-i18n="qualify-bachelor"></p>
-                    <p data-i18n="qualify-profession"></p>
-                    <p data-i18n="qualify-number"></p>
-                    <p style="font-style:italic;" data-i18n="qualify-date"></p>
-                    <div class="btn-links">
-                        <a href="./files/mulenko-diploma.pdf" class="pdf-link" target="_blank"><i class="fa-solid fa-file"></i><span>PDF</span></a>
-                        <a href="https://obrnadzor.gov.ru/gosudarstvennye-uslugi-i-funkczii/7701537808-gosfunction/formirovanie-i-vedenie-federalnogo-reestra-svedenij-o-dokumentah-ob-obrazovanii-i-ili-o-kvalifikaczii-dokumentah-ob-obuchenii/" class="external-link" target="_blank"><i class="fa-solid fa-user-check"></i><span data-i18n="qualify-check"></span></a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Личный сайт Павла Муленко" />
+        <title data-i18n="title">Павел Муленко</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <script>
+            const lang =
+                localStorage.getItem("lang") ||
+                (navigator.language.startsWith("ru") ? "ru" : "en");
+            const manifestLink = document.createElement("link");
+            manifestLink.rel = "manifest";
+            manifestLink.href =
+                lang === "ru" ? "site-ru.webmanifest" : "site-en.webmanifest";
+            document.head.appendChild(manifestLink);
+        </script>
+        <script
+            src="https://kit.fontawesome.com/5ea1e286d5.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body class="dark-mode">
+        <header>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li><a href="index.html" data-i18n="menu-main"></a></li>
+                    <li>
+                        <a
+                            href="publications.html"
+                            data-i18n="menu-publications"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="applications.html"
+                            data-i18n="menu-applications"
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="teaching.html" data-i18n="menu-teaching"></a>
+                    </li>
+                </ul>
+                <div class="controls">
+                    <div class="switch-container">
+                        <i class="fa-solid fa-sun"></i>
+                        <span data-i18n="theme-light"></span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-switch" checked />
+                            <span class="slider round"></span>
+                        </label>
+                        <span data-i18n="theme-dark"></span>
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+
+                    <div class="switch-container">
+                        <span class="flag-icon flag-icon-rus"></span>
+                        <span>Русский</span>
+                        <label class="switch">
+                            <input type="checkbox" id="lang-switch" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>English</span>
+                        <span class="flag-icon flag-icon-gbr"></span>
                     </div>
                 </div>
+            </nav>
+        </header>
 
-                <div class="card">
-                    <p class="title" data-i18n="award-title1"></p>
-                    <p data-i18n="award-title2"></p>
-                    <p style="font-style:italic;" data-i18n="award-date"></p>
-                    <div class="btn-links">
-                        <a href="./files/mulenko-award.pdf" class="pdf-link" target="_blank"><i class="fa-solid fa-file"></i><span>PDF</span></a>
-                        <a href="https://k-obr.spb.ru/o-komitete/news/71607/" class="external-link" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i><span data-i18n="award-check"></span></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section fade-in">
-            <h1 data-i18n="teaching-projects"></h1>
-            <div class="publication-list">
-                <div class="publication">
-                    <div class="publication-img">
-                        <img src="img/course.png" alt="Online-course screenshot">
-                        <div>
-                            <h3 data-i18n="course-title"></h3>
-                            <p class="authors" data-i18n="course-desc"></p>
-                            <p class="title" data-i18n="course-free"></p>
-                            <p class="date" data-i18n="course-grant"></p>
+        <main>
+            <section class="section">
+                <h1 data-i18n="teaching-qualify"></h1>
+                <div class="card-list">
+                    <div class="card">
+                        <p class="title" data-i18n="qualify-bachelor"></p>
+                        <p data-i18n="qualify-profession"></p>
+                        <p data-i18n="qualify-number"></p>
+                        <p
+                            style="font-style: italic"
+                            data-i18n="qualify-date"
+                        ></p>
+                        <div class="btn-links">
+                            <a
+                                href="./files/mulenko-diploma.pdf"
+                                class="pdf-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-file"></i
+                                ><span>PDF</span></a
+                            >
+                            <a
+                                href="https://obrnadzor.gov.ru/gosudarstvennye-uslugi-i-funkczii/7701537808-gosfunction/formirovanie-i-vedenie-federalnogo-reestra-svedenij-o-dokumentah-ob-obrazovanii-i-ili-o-kvalifikaczii-dokumentah-ob-obuchenii/"
+                                class="external-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-user-check"></i
+                                ><span data-i18n="qualify-check"></span
+                            ></a>
                         </div>
                     </div>
-                    <div class="btn-links">
-                        <a href="https://vk.com/wall55863403_2969" class="pdf-link" target="_blank"><i class="fa-solid fa-film"></i><span data-i18n="course-teaser"></span></a>
-                        <a href="https://www.formulo.org/ru/kruzhki/online-courses/" class="app-link" target="_blank"><i class="fa-solid fa-right-to-bracket"></i><span data-i18n="course-join"></span></a>
-                        <a href="https://xn--80afcdbalict6afooklqi5o.xn--p1ai/public/application/item?id=E72EBE2A-D7C7-4395-AA8E-C14AB0B4639B" class="external-link" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i><span data-i18n="course-fpg"></span></a>
+
+                    <div class="card">
+                        <p class="title" data-i18n="award-title1"></p>
+                        <p data-i18n="award-title2"></p>
+                        <p
+                            style="font-style: italic"
+                            data-i18n="award-date"
+                        ></p>
+                        <div class="btn-links">
+                            <a
+                                href="./files/mulenko-award.pdf"
+                                class="pdf-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-file"></i
+                                ><span>PDF</span></a
+                            >
+                            <a
+                                href="https://k-obr.spb.ru/o-komitete/news/71607/"
+                                class="external-link"
+                                target="_blank"
+                                ><i
+                                    class="fa-solid fa-square-arrow-up-right"
+                                ></i
+                                ><span data-i18n="award-check"></span
+                            ></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="section fade-in">
-            <h2 data-i18n="teaching-experience"></h2>
-            <div class="card-list">
-                <a class="card" href="https://www.mathschool.com/about">
-                    <img src="img/rsm.png" alt="Logo of Russian School of Mathematics">
-                    <p class="title" data-i18n="rsm-title"></p>
-                    <p style="font-style:italic;" data-i18n="rsm-date"></p>
-                </a>
-                <a class="card" href="" data-ru="https://www.school.ioffe.ru/" data-en="https://www.school.ioffe.ru/readings/pths_about_en.html">
-                    <img class="darkmode-only" src="img/phts-white.png" alt="Logo of High School of Physics and Technics">
-                    <img class="lightmode-only" src="img/phts-black.png" alt="Logo of High School of Physics and Technics">
-                    <p class="title" data-i18n="phts-title"></p>
-                    <p style="font-style:italic;" data-i18n="phts-date"></p>
-                </a>
-                <a class="card" href="" data-ru="http://pascallyceum.ru/" data-en="http://pascallyceum.ru/english-version/">
-                    <img class="darkmode-only" src="img/pascal-white.png" alt="Logo of Pascal Lyceum'">
-                    <img class="lightmode-only" src="img/pascal-black.png" alt="Logo of Pascal Lyceum'">
-                    <p class="title" data-i18n="pascal-title"></p>
-                    <p style="font-style:italic;" data-i18n="pascal-date"></p>
-                </a>
-                <a class="card" href="https://pskovmc.ru/math-school/">
-                    <img src="img/mshpskgu.png" alt="Logo of Math School of Pskov State university">
-                    <p class="title" data-i18n="mshpskgu-title"></p>
-                    <p style="font-style:italic;" data-i18n="mshpskgu-date"></p>
-                </a>
-                <a class="card" href="" data-ru="https://www.formulo.org/ru/" data-en="https://www.formulo.org/en/">
-                    <img src="img/fe.png" alt="Logo of socio-educational program 'Formula of Unity'">
-                    <p class="title" data-i18n="fe-title"></p>
-                    <p style="font-style:italic;" data-i18n="fe-date"></p>
-                </a>
-                <a class="card" href="https://club-yunih.orgs.biz/">
-                    <img src="img/yunih.png" alt="Logo of Young Scientists Club 'We are the People of the Future'">
-                    <p class="title" data-i18n="yunih-title"></p>
-                    <p style="font-style:italic;" data-i18n="yunih-date"></p>
-                </a>
-            </div>
-        </section>
-    </main>
-</body>
-<script src="script.js"></script>
+            <section class="section fade-in">
+                <h1 data-i18n="teaching-projects"></h1>
+                <div class="publication-list">
+                    <div class="publication">
+                        <div class="publication-img">
+                            <img
+                                src="img/course.png"
+                                alt="Online-course screenshot"
+                            />
+                            <div>
+                                <h3 data-i18n="course-title"></h3>
+                                <p class="authors" data-i18n="course-desc"></p>
+                                <p class="title" data-i18n="course-free"></p>
+                                <p class="date" data-i18n="course-grant"></p>
+                            </div>
+                        </div>
+                        <div class="btn-links">
+                            <a
+                                href="https://vk.com/wall55863403_2969"
+                                class="pdf-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-film"></i
+                                ><span data-i18n="course-teaser"></span
+                            ></a>
+                            <a
+                                href="https://www.formulo.org/ru/kruzhki/online-courses/"
+                                class="app-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-right-to-bracket"></i
+                                ><span data-i18n="course-join"></span
+                            ></a>
+                            <a
+                                href="https://xn--80afcdbalict6afooklqi5o.xn--p1ai/public/application/item?id=E72EBE2A-D7C7-4395-AA8E-C14AB0B4639B"
+                                class="external-link"
+                                target="_blank"
+                                ><i
+                                    class="fa-solid fa-square-arrow-up-right"
+                                ></i
+                                ><span data-i18n="course-fpg"></span
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section fade-in">
+                <h2 data-i18n="teaching-experience"></h2>
+                <div class="card-list">
+                    <a class="card" href="https://www.mathschool.com/about">
+                        <img
+                            src="img/rsm.png"
+                            alt="Logo of Russian School of Mathematics"
+                        />
+                        <p class="title" data-i18n="rsm-title"></p>
+                        <p style="font-style: italic" data-i18n="rsm-date"></p>
+                    </a>
+                    <a
+                        class="card"
+                        href=""
+                        data-ru="https://www.school.ioffe.ru/"
+                        data-en="https://www.school.ioffe.ru/readings/pths_about_en.html"
+                    >
+                        <img
+                            class="darkmode-only"
+                            src="img/phts-white.png"
+                            alt="Logo of High School of Physics and Technics"
+                        />
+                        <img
+                            class="lightmode-only"
+                            src="img/phts-black.png"
+                            alt="Logo of High School of Physics and Technics"
+                        />
+                        <p class="title" data-i18n="phts-title"></p>
+                        <p style="font-style: italic" data-i18n="phts-date"></p>
+                    </a>
+                    <a
+                        class="card"
+                        href=""
+                        data-ru="http://pascallyceum.ru/"
+                        data-en="http://pascallyceum.ru/english-version/"
+                    >
+                        <img
+                            class="darkmode-only"
+                            src="img/pascal-white.png"
+                            alt="Logo of Pascal Lyceum'"
+                        />
+                        <img
+                            class="lightmode-only"
+                            src="img/pascal-black.png"
+                            alt="Logo of Pascal Lyceum'"
+                        />
+                        <p class="title" data-i18n="pascal-title"></p>
+                        <p
+                            style="font-style: italic"
+                            data-i18n="pascal-date"
+                        ></p>
+                    </a>
+                    <a class="card" href="https://pskovmc.ru/math-school/">
+                        <img
+                            src="img/mshpskgu.png"
+                            alt="Logo of Math School of Pskov State university"
+                        />
+                        <p class="title" data-i18n="mshpskgu-title"></p>
+                        <p
+                            style="font-style: italic"
+                            data-i18n="mshpskgu-date"
+                        ></p>
+                    </a>
+                    <a
+                        class="card"
+                        href=""
+                        data-ru="https://www.formulo.org/ru/"
+                        data-en="https://www.formulo.org/en/"
+                    >
+                        <img
+                            src="img/fe.png"
+                            alt="Logo of socio-educational program 'Formula of Unity'"
+                        />
+                        <p class="title" data-i18n="fe-title"></p>
+                        <p style="font-style: italic" data-i18n="fe-date"></p>
+                    </a>
+                    <a class="card" href="https://club-yunih.orgs.biz/">
+                        <img
+                            src="img/yunih.png"
+                            alt="Logo of Young Scientists Club 'We are the People of the Future'"
+                        />
+                        <p class="title" data-i18n="yunih-title"></p>
+                        <p
+                            style="font-style: italic"
+                            data-i18n="yunih-date"
+                        ></p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="script.js"></script>
 </html>

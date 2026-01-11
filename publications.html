@@ -1,100 +1,189 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Личный сайт Павла Муленко" />
-    <title data-i18n="title">Павел Муленко</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <script>
-        const lang = localStorage.getItem('lang') || (navigator.language.startsWith('ru') ? 'ru' : 'en');
-        const manifestLink = document.createElement('link');
-        manifestLink.rel = 'manifest';
-        manifestLink.href = lang === 'ru' ? 'site-ru.webmanifest' : 'site-en.webmanifest';
-        document.head.appendChild(manifestLink);
-    </script>
-    <script src="https://kit.fontawesome.com/5ea1e286d5.js" crossorigin="anonymous"></script>
-</head>
-<body class="dark-mode">
-    <header>
-        <nav class="navbar">
-            <ul class="menu">
-                <li><a href="index.html" data-i18n="menu-main"></a></li>
-                <li><a href="publications.html" data-i18n="menu-publications"></a></li>
-                <li><a href="applications.html" data-i18n="menu-applications"></a></li>
-                <li><a href="teaching.html" data-i18n="menu-teaching"></a></li>
-            </ul>
-            <div class="controls">
-                <div class="switch-container">
-                    <i class="fa-solid fa-sun"></i>
-                    <span data-i18n="theme-light"></span>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-switch" checked>
-                        <span class="slider round"></span>
-                    </label>
-                    <span data-i18n="theme-dark"></span>
-                    <i class="fa-solid fa-moon"></i>
-                </div>
-                
-                <div class="switch-container">
-                    <span class="flag-icon flag-icon-rus"></span>
-                    <span>Русский</span>
-                    <label class="switch">
-                        <input type="checkbox" id="lang-switch">
-                        <span class="slider round"></span>
-                    </label>
-                    <span>English</span>
-                    <span class="flag-icon flag-icon-gbr"></span>
-                </div>                
-            </div>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="section">
-            <h1 data-i18n="papers"></h1>
-            <div class="publication-list">
-                <div class="publication fade-in">
-                    <h3 data-i18n="teaching-videos-title"></h3>
-                    <p class="authors" data-i18n="teaching-videos-authors"></p>
-                    <p class="title" data-i18n="teaching-videos"></p>
-                    <p class="date" data-i18n="teaching-videos-date"></p>
-                    <div class="btn-links">
-                        <a href="./files/mulenko-paper3.pdf" class="pdf-link" target="_blank"><i class="fa-solid fa-file"></i><span>PDF</span></a>
-                        <a href="https://istina.msu.ru/publications/article/742249354/" class="external-link" target="_blank"><i class="fa-solid fa-link"></i><span data-i18n="istina"></span></a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Личный сайт Павла Муленко" />
+        <title data-i18n="title">Павел Муленко</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <script>
+            const lang =
+                localStorage.getItem("lang") ||
+                (navigator.language.startsWith("ru") ? "ru" : "en");
+            const manifestLink = document.createElement("link");
+            manifestLink.rel = "manifest";
+            manifestLink.href =
+                lang === "ru" ? "site-ru.webmanifest" : "site-en.webmanifest";
+            document.head.appendChild(manifestLink);
+        </script>
+        <script
+            src="https://kit.fontawesome.com/5ea1e286d5.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body class="dark-mode">
+        <header>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li><a href="index.html" data-i18n="menu-main"></a></li>
+                    <li>
+                        <a
+                            href="publications.html"
+                            data-i18n="menu-publications"
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            href="applications.html"
+                            data-i18n="menu-applications"
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="teaching.html" data-i18n="menu-teaching"></a>
+                    </li>
+                </ul>
+                <div class="controls">
+                    <div class="switch-container">
+                        <i class="fa-solid fa-sun"></i>
+                        <span data-i18n="theme-light"></span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-switch" checked />
+                            <span class="slider round"></span>
+                        </label>
+                        <span data-i18n="theme-dark"></span>
+                        <i class="fa-solid fa-moon"></i>
                     </div>
-                </div>
-        
-                <div class="publication fade-in">
-                    <h3 data-i18n="function-problems-title"></h3>
-                    <p class="authors" data-i18n="function-problems-authors"></p>
-                    <p class="title" data-i18n="function-problems"></p>
-                    <p class="date" data-i18n="function-problems-date"></p>
-                    <div class="btn-links">
-                        <a href="./files/mulenko-paper2.pdf" class="pdf-link" target="_blank"><i class="fa-solid fa-file"></i><span>PDF</span></a>
-                        <a href="https://istina.msu.ru/publications/article/742249489/" class="external-link" target="_blank"><i class="fa-solid fa-link"></i><span data-i18n="istina"></span></a>
-                    </div>
-                </div>
 
-                <div class="publication fade-in">
-                    <h3 data-i18n="quantum-dots-title"></h3>
-                    <p class="authors" data-i18n="quantum-dots-authors"></p>
-                    <p class="title" data-i18n="quantum-dots"></p>
-                    <p class="date" data-i18n="quantum-dots-date"></p>
-                    <div class="btn-links">
-                        <a href="./files/mulenko-paper1.pdf" class="pdf-link" target="_blank"><i class="fa-solid fa-file"></i><span>PDF</span></a>
-                        <a href="./files/mulenko-paper1.zip" class="app-link" target="_blank"><i class="fa-solid fa-file-zipper"></i><span data-i18n="quantum-dots-zip"></span></a>
-                        <a href="https://istina.msu.ru/publications/article/742249564/" class="external-link" target="_blank"><i class="fa-solid fa-link"></i><span data-i18n="istina"></span></a>
-                        <a href="https://ruslan.library.spbstu.ru/pwb/detail?db=ANALITS2005&id=RU%5CSPSTU%5Cbooks%5C20114531" class="external-link" target="_blank"><i class="fa-solid fa-link"></i><span data-i18n="quantum-dots-ibkspbpu"></span></a>
+                    <div class="switch-container">
+                        <span class="flag-icon flag-icon-rus"></span>
+                        <span>Русский</span>
+                        <label class="switch">
+                            <input type="checkbox" id="lang-switch" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>English</span>
+                        <span class="flag-icon flag-icon-gbr"></span>
                     </div>
                 </div>
-            </div>
-        </section>        
-    </main>
-</body>
-<script src="script.js"></script>
+            </nav>
+        </header>
+
+        <main>
+            <section class="section">
+                <h1 data-i18n="papers"></h1>
+                <div class="publication-list">
+                    <div class="publication fade-in">
+                        <h3 data-i18n="teaching-videos-title"></h3>
+                        <p
+                            class="authors"
+                            data-i18n="teaching-videos-authors"
+                        ></p>
+                        <p class="title" data-i18n="teaching-videos"></p>
+                        <p class="date" data-i18n="teaching-videos-date"></p>
+                        <div class="btn-links">
+                            <a
+                                href="./files/mulenko-paper3.pdf"
+                                class="pdf-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-file"></i
+                                ><span>PDF</span></a
+                            >
+                            <a
+                                href="https://istina.msu.ru/publications/article/742249354/"
+                                class="external-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-link"></i
+                                ><span data-i18n="istina"></span
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div class="publication fade-in">
+                        <h3 data-i18n="function-problems-title"></h3>
+                        <p
+                            class="authors"
+                            data-i18n="function-problems-authors"
+                        ></p>
+                        <p class="title" data-i18n="function-problems"></p>
+                        <p class="date" data-i18n="function-problems-date"></p>
+                        <div class="btn-links">
+                            <a
+                                href="./files/mulenko-paper2.pdf"
+                                class="pdf-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-file"></i
+                                ><span>PDF</span></a
+                            >
+                            <a
+                                href="https://istina.msu.ru/publications/article/742249489/"
+                                class="external-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-link"></i
+                                ><span data-i18n="istina"></span
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div class="publication fade-in">
+                        <h3 data-i18n="quantum-dots-title"></h3>
+                        <p class="authors" data-i18n="quantum-dots-authors"></p>
+                        <p class="title" data-i18n="quantum-dots"></p>
+                        <p class="date" data-i18n="quantum-dots-date"></p>
+                        <div class="btn-links">
+                            <a
+                                href="./files/mulenko-paper1.pdf"
+                                class="pdf-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-file"></i
+                                ><span>PDF</span></a
+                            >
+                            <a
+                                href="./files/mulenko-paper1.zip"
+                                class="app-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-file-zipper"></i
+                                ><span data-i18n="quantum-dots-zip"></span
+                            ></a>
+                            <a
+                                href="https://istina.msu.ru/publications/article/742249564/"
+                                class="external-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-link"></i
+                                ><span data-i18n="istina"></span
+                            ></a>
+                            <a
+                                href="https://ruslan.library.spbstu.ru/pwb/detail?db=ANALITS2005&id=RU%5CSPSTU%5Cbooks%5C20114531"
+                                class="external-link"
+                                target="_blank"
+                                ><i class="fa-solid fa-link"></i
+                                ><span data-i18n="quantum-dots-ibkspbpu"></span
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="script.js"></script>
 </html>

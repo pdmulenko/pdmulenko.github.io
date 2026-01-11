@@ -13,48 +13,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function loadLanguage(lang) {
         fetch(`lang/${lang}.json`)
-            .then(response => response.json())
-            .then(data => {
+            .then((response) => response.json())
+            .then((data) => {
                 document.title = data.title;
 
-                document.querySelectorAll("[data-i18n]").forEach(element => {
+                document.querySelectorAll("[data-i18n]").forEach((element) => {
                     let key = element.getAttribute("data-i18n");
                     if (data[key]) {
                         element.innerHTML = data[key].replace(/\n/g, "<br>");
                     }
                 });
-                
-                document.querySelectorAll('a').forEach(link => {
+
+                document.querySelectorAll("a").forEach((link) => {
                     const newHref = link.getAttribute(`data-${lang}`);
                     if (newHref) {
                         link.href = newHref;
                     }
                 });
 
-                document.querySelectorAll('img').forEach(img => {
+                document.querySelectorAll("img").forEach((img) => {
                     const newSrc = img.getAttribute(`data-${lang}`);
                     if (newSrc) {
                         img.src = newSrc;
                     }
-                });                
-
-                document.querySelectorAll(".lang-en, .lang-ru").forEach(el => {
-                    el.classList.remove("visible");
                 });
-            
-                document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+
+                document
+                    .querySelectorAll(".lang-en, .lang-ru")
+                    .forEach((el) => {
+                        el.classList.remove("visible");
+                    });
+
+                document.querySelectorAll(`.lang-${lang}`).forEach((el) => {
                     el.classList.add("visible");
                 });
 
                 if (lang === "ru") {
-                    document.querySelector("meta[property='og:title']").setAttribute("content", "Личный сайт Павла Муленко");
+                    document
+                        .querySelector("meta[property='og:title']")
+                        .setAttribute("content", "Личный сайт Павла Муленко");
                 } else {
-                    document.querySelector("meta[property='og:title']").setAttribute("content", "Personal website of Paul Mulenko");
+                    document
+                        .querySelector("meta[property='og:title']")
+                        .setAttribute(
+                            "content",
+                            "Personal website of Paul Mulenko"
+                        );
                 }
 
                 localStorage.setItem("lang", lang);
             })
-            .catch(error => console.error("Ошибка загрузки языка:", error));
+            .catch((error) => console.error("Ошибка загрузки языка:", error));
     }
 
     loadLanguage(currentLang);
@@ -72,20 +81,23 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("lang", newLang);
         loadLanguage(newLang);
     });
-    
+
     // === Анимация появления блоков ===
     const fadeInElements = document.querySelectorAll(".fade-in");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Отключаем наблюдение после появления
-            }
-        });
-    }, {
-        threshold: 0.2 // Запускаем, когда 20% элемента в зоне видимости
-    });
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target); // Отключаем наблюдение после появления
+                }
+            });
+        },
+        {
+            threshold: 0.2, // Запускаем, когда 20% элемента в зоне видимости
+        }
+    );
 
-    fadeInElements.forEach(el => observer.observe(el));
+    fadeInElements.forEach((el) => observer.observe(el));
 });
