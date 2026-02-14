@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     langSwitch.checked = currentLang === "en";
 
     function loadLanguage(lang) {
-        fetch(`lang/${lang}.json`)
+        fetch(`/lang/${lang}.json`)
             .then((response) => response.json())
             .then((data) => {
                 document.title = data.title;
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         .querySelector("meta[property='og:title']")
                         .setAttribute(
                             "content",
-                            "Personal website of Paul Mulenko"
+                            "Personal website of Paul Mulenko",
                         );
                 }
 
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             threshold: 0.2, // Запускаем, когда 20% элемента в зоне видимости
-        }
+        },
     );
 
     fadeInElements.forEach((el) => observer.observe(el));
