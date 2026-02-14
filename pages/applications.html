@@ -13,19 +13,19 @@
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="./icons/apple-touch-icon.png"
+            href="/icons/apple-touch-icon.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="./icons/favicon-32x32.png"
+            href="/icons/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="./icons/favicon-16x16.png"
+            href="/icons/favicon-16x16.png"
         />
         <script>
             const lang =
@@ -34,7 +34,7 @@
             const manifestLink = document.createElement("link");
             manifestLink.rel = "manifest";
             manifestLink.href =
-                lang === "ru" ? "site-ru.webmanifest" : "site-en.webmanifest";
+                lang === "ru" ? "/site-ru.webmanifest" : "/site-en.webmanifest";
             document.head.appendChild(manifestLink);
         </script>
         <script
@@ -46,22 +46,22 @@
         <header>
             <nav class="navbar">
                 <ul class="menu">
-                    <li><a href="index.html" data-i18n="menu-main"></a></li>
+                    <li><a href="/index.html" data-i18n="menu-main"></a></li>
                     <li>
                         <a
-                            href="./pages/publications.html"
+                            href="/pages/publications.html"
                             data-i18n="menu-publications"
                         ></a>
                     </li>
                     <li>
                         <a
-                            href="./pages/applications.html"
+                            href="/pages/applications.html"
                             data-i18n="menu-applications"
                         ></a>
                     </li>
                     <li>
                         <a
-                            href="./pages/teaching.html"
+                            href="/pages/teaching.html"
                             data-i18n="menu-teaching"
                         ></a>
                     </li>
@@ -98,7 +98,7 @@
                 <div class="card-list">
                     <div class="card fade-in">
                         <img
-                            src="android-chrome-512x512.png"
+                            src="/img/android-chrome-512x512.png"
                             alt="Pretty Drafter logo"
                         />
                         <p class="title" data-i18n="app-prettydrafter"></p>
@@ -109,7 +109,7 @@
                         <p data-i18n="app-prettydrafter-ver"></p>
                         <div class="btn-links">
                             <a
-                                href="./pretty-drafter/"
+                                href="/pretty-drafter"
                                 class="external-link"
                                 target="_blank"
                                 ><i class="fa-solid fa-globe"></i
@@ -120,7 +120,7 @@
 
                     <div class="card fade-in">
                         <img
-                            src="img/app-boardgame.png"
+                            src="/img/app-boardgame.png"
                             alt="Boardgame app logo"
                         />
                         <p class="title" data-i18n="app-boardgame"></p>
@@ -131,7 +131,7 @@
                         <p data-i18n="app-boardgame-ver"></p>
                         <div class="btn-links">
                             <a
-                                href="./files/MathTableAppCLR v3.1.exe"
+                                href="/files/MathTableAppCLR v3.1.exe"
                                 class="external-link"
                                 target="_blank"
                                 ><i class="fa-solid fa-window-maximize"></i
@@ -146,7 +146,7 @@
 
                     <div class="card fade-in">
                         <img
-                            src="img/app-multicash.png"
+                            src="/img/app-multicash.png"
                             alt="Multicash Tracker app logo"
                         />
                         <p class="title" data-i18n="app-multicash"></p>
@@ -164,7 +164,7 @@
                     </div>
 
                     <div class="card fade-in">
-                        <img src="img/app-hat.png" alt="Hat app logo" />
+                        <img src="/img/app-hat.png" alt="Hat app logo" />
                         <p class="title" data-i18n="app-hat"></p>
                         <p
                             style="font-style: italic"
@@ -185,5 +185,5 @@
             </section>
         </main>
     </body>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </html>
